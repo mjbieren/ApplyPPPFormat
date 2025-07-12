@@ -3,13 +3,13 @@ This step is necessary since Phylopypruner needs a certain format.
 OSG added the right format to the alignment files, but IQTree removed this format in the tree output files. Apply Phylopypruner Format does this for you.
 It then moves the tree files to the output folder and also copies the alignment files to the output files.
 
-It needs a taxonomic group file as a guidance for the species/strain names (See [TaxonomicGroupFiles](/Scripts/10_OrthogroupSequenceGrabber_OSG/TaxonomicGroupFiles/) for examples)
+It needs a taxonomic group file as guidance for the species/strain names (See [TaxonomicGroupFiles](https://github.com/mjbieren/ApplyPPPFormat/tree/main/TaxonomicGroupFiles) for examples). It doesn't matter how many taxonomic groups there are; the tool needs to know the header and strain format (which should be consistent).
 
-To run it, edit the [APPPF.sh](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/12_APPPFilter/APPPF.sh) file and edit lines number 3 to 7
-This tool can run with just 1 cpu and output files can not be bigger than 1gb of RAM. It can run on any 64-bit machine on the front end and is super fast. 5% of the time is the calculations. 95% of the time, it parses the input file (loading to memory) and writes the output files. Which is heavily depending on the speed of your disks and/or your network speed.
+To run it, edit the [APPPFormat.sh](https://github.com/mjbieren/ApplyPPPFormat/blob/main/APPPFormat.sh) and run it.
+This tool can run with just 1 cpu and output files can not be bigger than 1gb of RAM. It can run on any 64-bit machine on the front end and is super fast. 5% of the time is spent on the calculations. 95% of the time, it parses the input file (loading to memory) and writes the output files, which is heavily dependent on the speed of your disks and/or your network speed.
 
 ## APPPFormat (Apply Phylopypruner Format)
-This tool is created with the boost library (v1.78). And is developed in Visual Studio 2019 with the GCC compiler (For remote Linux).  I've compiled 3 different executables (they are portable!) under Debian 10 but also work and tested on Debian 11 ([APPPFormat_Debian.out](/Executables/APPPFormat/)), Scientific Linux 7, which is based on Red Hat ([APPPFormat_HPC.out](/Executables/APPPFormat/)), and Arch Linux, which is still in beta ([APPPFormat_Arch.out](/Executables/APPPFormat/)).
+This tool was created using the Boost library (version 1.88). It is developed in Visual Studio 2019 with the GCC compiler (For remote Linux). I've compiled two different (static) executables (they are portable!) under Debian 12 ([APPPFormat_Static_Debian.out](https://github.com/mjbieren/ApplyPPPFormat/blob/main/Sources/Executables/APPPFormat_Static_Debian.out)), and Rocky Linux 8, which is based on Linux Red Hat ([APPFormat_Static_HPC.out](https://github.com/mjbieren/ApplyPPPFormat/blob/main/Sources/Executables/APPPFormat_Static_HPC.out).
 
 Either make your own executable with the corresponding source files or use one of the already existing executables.
 
