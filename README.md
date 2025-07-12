@@ -1,7 +1,7 @@
 # Apply Phylopypruner format (APPPFormat)
-This step is necessary since Phylopypruner needs a certain format.
-OSG added the right format to the alignment files, but IQTree removed this format in the tree output files. Apply Phylopypruner Format does this for you.
-It then moves the tree files to the output folder and also copies the alignment files to the output files.
+This step is necessary because Phylopypruner requires a specific format.
+OSG added the correct format to the alignment files; however, IQTree removed this format from the tree output files. Apply Phylopypruner Format does this for you.
+It then moves the tree files to the output folder and copies the alignment files to the exact location.
 
 It needs a taxonomic group file as guidance for the species/strain names (See [TaxonomicGroupFiles](https://github.com/mjbieren/ApplyPPPFormat/tree/main/TaxonomicGroupFiles) for examples). It doesn't matter how many taxonomic groups there are; the tool needs to know the header and strain format (which should be consistent).
 
@@ -11,7 +11,7 @@ This tool can run with just 1 cpu and output files can not be bigger than 1gb of
 ## APPPFormat (Apply Phylopypruner Format)
 This tool was created using the Boost library (version 1.88). It is developed in Visual Studio 2019 with the GCC compiler (For remote Linux). I've compiled two different (static) executables (they are portable!) under Debian 12 ([APPPFormat_Static_Debian.out](https://github.com/mjbieren/ApplyPPPFormat/blob/main/Sources/Executables/APPPFormat_Static_Debian.out)), and Rocky Linux 8, which is based on Linux Red Hat ([APPFormat_Static_HPC.out](https://github.com/mjbieren/ApplyPPPFormat/blob/main/Sources/Executables/APPPFormat_Static_HPC.out)).
 
-Either make your own executable with the corresponding source files or use one of the already existing executables.
+Either create your own executable using the corresponding [source files](https://github.com/mjbieren/ApplyPPPFormat/tree/main/Sources/main) or use one of the existing executables.
 
 ### Command line options
 Program format:
