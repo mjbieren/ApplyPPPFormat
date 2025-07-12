@@ -9,7 +9,7 @@ To run it, edit the [APPPFormat.sh](https://github.com/mjbieren/ApplyPPPFormat/b
 This tool can run with just 1 cpu and output files can not be bigger than 1gb of RAM. It can run on any 64-bit machine on the front end and is super fast. 5% of the time is spent on the calculations. 95% of the time, it parses the input file (loading to memory) and writes the output files, which is heavily dependent on the speed of your disks and/or your network speed.
 
 ## APPPFormat (Apply Phylopypruner Format)
-This tool was created using the Boost library (version 1.88). It is developed in Visual Studio 2019 with the GCC compiler (For remote Linux). I've compiled two different (static) executables (they are portable!) under Debian 12 ([APPPFormat_Static_Debian.out](https://github.com/mjbieren/ApplyPPPFormat/blob/main/Sources/Executables/APPPFormat_Static_Debian.out)), and Rocky Linux 8, which is based on Linux Red Hat ([APPFormat_Static_HPC.out](https://github.com/mjbieren/ApplyPPPFormat/blob/main/Sources/Executables/APPPFormat_Static_HPC.out).
+This tool was created using the Boost library (version 1.88). It is developed in Visual Studio 2019 with the GCC compiler (For remote Linux). I've compiled two different (static) executables (they are portable!) under Debian 12 ([APPPFormat_Static_Debian.out](https://github.com/mjbieren/ApplyPPPFormat/blob/main/Sources/Executables/APPPFormat_Static_Debian.out)), and Rocky Linux 8, which is based on Linux Red Hat ([APPFormat_Static_HPC.out](https://github.com/mjbieren/ApplyPPPFormat/blob/main/Sources/Executables/APPPFormat_Static_HPC.out)).
 
 Either make your own executable with the corresponding source files or use one of the already existing executables.
 
